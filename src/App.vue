@@ -1,18 +1,23 @@
 <template>
+  <the-header></the-header>
   <div class="app__bg-back">
-    <div class="app__bg-front">
-      <logo-animation></logo-animation>
-    </div>
+    <div class="app__bg-front"></div>
     <div class="app__bg-botton"></div>
   </div>
+  <logo-animation></logo-animation>
+  <bio-sec></bio-sec>
 </template>
 
 <script>
-import LogoAnimation from "./components/LogoAnimation.vue";
+import LogoAnimation from "./components/sections/AnimationSection.vue";
+import BioSec from "./components/sections/BioSection.vue";
+import TheHeader from "./components/layout/TheHeader.vue";
 
 export default {
   components: {
+    TheHeader,
     LogoAnimation,
+    BioSec,
   },
 };
 </script>
@@ -61,5 +66,12 @@ body {
   width: 100vw;
   height: 50px;
   background-color: white;
+}
+
+/* --- SECTIONS  --- */
+section {
+  width: calc(100vw - 117px);
+  min-height: calc(100vh - 100px);
+  margin: 50px 0 0 50px;
 }
 </style>
